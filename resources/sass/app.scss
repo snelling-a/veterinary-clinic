@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background: url("https://wallpapercave.com/wp/wp6878829.jpg") no-repeat
+        center center fixed;
+    font-family: "Commissioner", sans-serif;
+
+    .home-header {
+        font-weight: 500;
+        left: 20%;
+        position: absolute;
+        top: 50%;
+    }
+}
