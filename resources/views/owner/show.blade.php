@@ -20,7 +20,7 @@
 </ul>
 
 
-<a href="{{action('PetController@create', $pet->id)}}"><button>New Pet</button></a>
+<a href="{{--action('PetController@create', $pet->id)--}}"><button>New Pet</button></a>
 
 
 
