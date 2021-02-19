@@ -9,7 +9,7 @@ class Pet extends Model
 {
     use HasFactory;
 
-    public function owners()
+    public function owner()
     {
         return $this->belongsTo(Owner::class);
     }
