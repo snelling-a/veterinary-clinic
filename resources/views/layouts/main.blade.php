@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 
-    <title>Hackathon #3</title>
+    <title>St. Hector's Veterinary Clinic</title>
 </head>
 <body>
     @yield('content')
