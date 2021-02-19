@@ -16,4 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get("/", "HomepageController@index");
 
 Route::get("/search", "PetController@index");
-Route::get("/show", "PetController@show");
+Route::get("/pet/{id}", "PetController@show");
+Route::get("/pet/{id}/edit", "PetController@edit");
+Route::post("/pet/{id}/update", "PetController@update");
+
+Route::get("/owner/{id}", "OwnerController@show");

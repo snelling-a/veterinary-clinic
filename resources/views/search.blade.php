@@ -15,7 +15,7 @@
     <ul>
         @foreach ($owners as $owner)
             @foreach ($owner->pets as $pet)
-                <li>{{$pet->name}}| {{$owner->surname}}, {{$owner->first_name}}</li>
+                <li><a href="{{action("PetController@show", $pet->id)}}">{{$pet->name}}</a>| <a href="{{-- owner id --}}">{{$owner->surname}}, {{$owner->first_name}}</a></li>
             @endforeach
         @endforeach
     </ul>

@@ -2,38 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Owner;
-use App\Models\Pet;
 use Illuminate\Http\Request;
 
-class PetController extends Controller
+class Owner extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
         //
-        $name_frag = $request->name;
-        if ($name_frag) {
-            $owners = Owner::with("pets")
-                ->select("owners.*")
-                ->distinct()
-                ->leftJoin("pets", "owners.id", "pets.owner_id")
-                ->where("first_name", "like", "%$name_frag%")
-                ->orWhere("surname", "like", "%$name_frag%")
-                ->orWhere("pets.name", "like", "%$name_frag%")
-                ->orderBy("surname", "asc")
-                ->get();
-            // ->toSql();
-            // dd($owners);
-        } else {
-            $owners = [];
-        }
-        $request->flash();
-        return view("search", compact(["owners"]));
     }
 
     /**
@@ -66,8 +46,6 @@ class PetController extends Controller
     public function show($id)
     {
         //
-        $pet = Pet::with("owner")->findOrFail($id);
-        return view("pets.show", compact(["pet"]));
     }
 
     /**
@@ -79,9 +57,6 @@ class PetController extends Controller
     public function edit($id)
     {
         //
-        $pet = Pet::findOrFail($id);
-
-        return view("pets.create-edit", compact(["pet"]));
     }
 
     /**
@@ -94,15 +69,6 @@ class PetController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $edited_pet = Pet::findOrFail($id);
-        $edited_pet->name = $request->input("name");
-        $edited_pet->breed = $request->input("breed");
-        $edited_pet->weight = $request->input("weight");
-        $edited_pet->age = $request->input("age");
-        // $edited_pet->owner_id = $request->input("owner_id");
-        $edited_pet->save();
-
-        return redirect(action("PetController@show", $edited_pet->id));
     }
 
     /**
