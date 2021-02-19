@@ -2,7 +2,7 @@
 
 @section('content')
 
-<form action="{{action('PetController@index')}}" method="get">
+<form action="{{action('SearchController@index')}}" method="get">
     <label for="name">Patient or Owner name:
         <input type="text" name="name" value="{{ old('name') }}">
     </label>

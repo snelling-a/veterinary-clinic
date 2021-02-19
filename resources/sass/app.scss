@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "pagination";
 
 * {
     box-sizing: border-box;
@@ -11,4 +12,16 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    footer {
+        background: white;
+        bottom: 0;
+        position: fixed;
+        width: 100%;
+        display: flex;
+
+        div {
+            margin: 0 auto;
+        }
+    }
 }

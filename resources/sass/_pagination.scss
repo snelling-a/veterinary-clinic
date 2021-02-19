@@ -1,0 +1,26 @@
+.pets {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__pet {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 20%;
+        margin: 1rem;
+
+        img {
+            border-radius: 50%;
+            height: 5rem;
+            overflow: hidden;
+            width: 5rem;
+        }
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem 0;
+    width: 80%;
+}

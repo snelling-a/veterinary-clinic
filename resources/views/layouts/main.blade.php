@@ -9,6 +9,10 @@
     <title>St. Hector's Veterinary Clinic</title>
 </head>
 <body>
+    @include('common.header')
+
     @yield('content')
+
+    @include('common.footer')
 </body>
 </html>
