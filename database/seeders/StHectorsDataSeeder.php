@@ -22,7 +22,7 @@ class StHectorsDataSeeder extends Seeder
         // var_dump($data);
         foreach ($data as $owner) {
             $new_owner = new Owner();
-            $new_owner->first_name = $owner->name;
+            $new_owner->first_name = $owner->first_name;
             $new_owner->surname = $owner->surname;
 
             $new_owner->save();

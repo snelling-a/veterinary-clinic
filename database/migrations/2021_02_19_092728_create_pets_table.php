@@ -20,6 +20,7 @@ class CreatePetsTable extends Migration
             $table->string("name");
             $table->string("breed");
             $table->integer("weight");
+            $table->integer("age");
             $table->string("photo");
             $table->timestamps();
         });

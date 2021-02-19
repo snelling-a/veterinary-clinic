@@ -15,11 +15,11 @@ class CreateOwnersTable extends Migration
     {
         Schema::create("owners", function (Blueprint $table) {
             $table->id();
-            $table->string("name");
+            $table->string("first_name");
             $table->string("surname");
-            $table->string("address");
-            $table->string("email");
-            $table->string("phone");
+            $table->string("address")->nullable();
+            $table->string("email")->nullable();
+            $table->string("phone")->nullable();
             $table->timestamps();
         });
     }
